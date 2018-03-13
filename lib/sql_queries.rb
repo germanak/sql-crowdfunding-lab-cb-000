@@ -33,7 +33,8 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
 FROM users
 INNER JOIN pledges
 ON pledges.user_id = users.id
-GROUP BY users.name"
+GROUP BY users.name
+ORDER BY pledges.amounts AND users.name"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
